@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>放大镜</title>
+		<style type="text/css">
+			html,
+			body,
+			div,
+			ul,li,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				position: relative;
+				width: 1000px;
+				margin: 100px auto 0 ;
+			}
+			.small-wrapper {
+				position: relative;
+				width: 300px;
+				height: 300px;
+			}
+			.small-wrapper img {
+				width: 100%;
+				height: 100%;
+			}
+			.small-wrapper .filter {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100px;
+				height: 100px;
+				background: rgba(240,240,240,0.6);
+				cursor: move;
+			}
+			.large-wrapper {
+				display: none;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 320px;
+				width: 300px;
+				height: 300px;
+			}
+			.large-wrapper img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 300%;
+				height: 300%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="small-wrapper">
+				<img src="img/1.jpg">
+				<div class="filter"></div>
+			</div>
+			<div class="large-wrapper">
+				<img class="img-show" src="img/1.jpg">
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.11.3.js"></script>
+		<script>
+			$(function(){
+				var zoom = {
+					sWrapper: $('.small-wrapper'),
+					lWrapper: $('.large-wrapper'),
+					filter: $('.small-wrapper .filter'),
+					imgShow: $('.large-wrapper .img-show'),
+					//获取小图距离文档的距离
+					offset: $('.small-wrapper').offset(),
+					//初始化数据及方法调用
+					init: function(){
+						this.hover();
+						this.mousemove();
+					},
+					//鼠标进入图片区域
+					hover: function(){
+						var that = this;
+						this.sWrapper.hover(function(e){
+							//显示放大镜（滤镜）
+							that.filter.show();
+							that.lWrapper.show();
+							that.getPos(e);
+							that.filterMove();
+						},function(){
+							that.filter.hide();
+							that.lWrapper.hide();
+						});
+					},
+					mousemove: function(){
+						var that = this;
+						this.sWrapper.mousemove(function(e){
+							that.getPos(e);
+							that.filterMove();
+							that.imgShowMove();
+						});
+					},
+					filterMove: function(){
+						//console.log(e.offsetX,e.offsetY);
+						this.filter.css({
+							top: this.y - 50,
+							left: this.x - 50
+						});
+					},
+					imgShowMove: function(){
+						this.imgShow.css({
+							top: -(this.y - 50) * 3, // 大图是小图的3倍
+							left: -(this.x - 50) * 3
+						});
+					},
+					getPos: function(e){
+						//获取鼠标距离小图盒子的距离
+						var posX = e.pageX - this.offset.left;
+						var posY = e.pageY - this.offset.top;
+						this.x = (posX > 250 ? 250 : (posX < 50 ? 50 : posX));
+						this.y = (posY > 250 ? 250 : (posY < 50 ? 50 : posY));
+					}
+				};
+				zoom.init();
+			});
+		</script>
+	</body>
+</html>
