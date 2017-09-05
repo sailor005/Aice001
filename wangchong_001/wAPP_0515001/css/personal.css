@@ -1,0 +1,144 @@
+
+header{
+	width: 100%;
+	background: #f6f6f6;
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header p{
+	margin: 0.1rem auto;
+}
+
+
+
+section{
+	flex: 1;
+	/*background: blue;*/
+	overflow-y:scroll;
+}
+section .bjth{
+	width: 100%;
+	height: 2rem;
+	font-size: 0.2rem;
+	background: #b61b1f;
+	position: relative;
+}
+section .renren{
+	width: 1rem;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0.3rem;
+	left: 0.2rem;
+}
+section .renren img{
+	width: 100%;
+	background: #b61b1f;
+}
+section .bjth a:nth-of-type(2){
+	color:white;
+	position: absolute;
+	top: 0.7rem;
+	left: 1.4rem;
+}
+section .bjth a:nth-of-type(3){
+	display: block;
+	font-size: 0.12rem;
+	color:white;
+	text-align: center;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.3rem;
+}
+section .bjth a:nth-of-type(3) .iconfont{
+	display: block;
+	font-size: 0.36rem;
+	margin-bottom: 0.1rem;
+}
+section .bjth a:nth-of-type(3) span{
+	display: block;
+	padding: 0 0.05rem;
+	border-radius: 0.12rem;
+	background: orange;
+	color: black;
+	
+}
+section .qbdd{
+	width: 100%;
+	height: 0.9rem;
+	background: white;
+	margin: 0.1rem 0;
+	padding: 0.1rem 0;
+	font-size: 14px;
+	border-bottom: 1px solid #848484;
+}
+section .qbdd a{
+	display: flex;
+	justify-content: space-between;
+}
+section .qbdd span{
+	margin: 0 0.1rem;
+	color: black;
+}
+section .qbdd span:nth-of-type(2){
+	
+}
+section .qbdd div{
+	clear: both;
+	display: flex;
+	margin-top: 0.1rem;
+	border-top: 1px solid #848484;
+	text-align: center;
+}
+section .qbdd div a{
+	clear: both;
+	display: block;
+	width: 25%;
+	font-size: 12px;
+	color: black;
+	margin: 0.1rem auto;
+	border-right: 1px solid #848484;
+}
+section .qbdd div a:nth-last-of-type(1){
+	border-right: none;
+}
+section .qbdd div a .iconfont{
+	display: block;
+	font-size: 0.24rem;
+	color: #848484;
+	margin-bottom: 0.03rem;
+}
+
+/*czfx*/
+.czfx{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	background: white;
+	margin-bottom: 0.8rem;
+}
+.czfx a{
+	display: block;
+	width: 25%;
+	padding: 0.15rem 0;
+	font-size: 10px;
+	color: black;
+	text-align: center;
+	border-right: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	box-sizing: border-box;
+}
+.czfx img{
+	width: 0.55rem;
+	height: 0.45rem;
+	margin:0 auto;
+	margin-bottom: 0.07rem;
+}
+.czfx a:nth-child(4n){
+	border-right: none;
+}
+
+
+

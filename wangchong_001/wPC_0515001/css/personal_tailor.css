@@ -1,0 +1,117 @@
+
+
+
+
+
+/*回到顶部-------------------------------------------------------*/
+
+header #hui{
+	width: 108px;
+	position: absolute;
+	right: 1%;
+	text-align: center;
+	background: white;
+	z-index: 2;
+}
+#huiwb{
+	width: 100px;
+	border: 1px solid black;
+	margin: 3px;
+
+}
+#xzapp a{
+	line-height: 45px;
+	display: block;
+	margin: 2px;
+	border-bottom: 1px solid black;
+}
+#zxkf span{
+	display: block;
+	margin: 4px 0;
+}
+#zxkf span:nth-of-type(1){
+	font-size: 14px;
+}
+#zxkf span:nth-of-type(2){
+	font-size: 12px;
+}
+#hddb{
+	background: black;
+	color: white;
+	line-height: 25px;
+}
+#xzapp,#hddb{
+	cursor: pointer;
+}
+
+
+/*轮播图----------------------*/
+#key01,#key02{
+	color:gray;
+}
+
+
+/*section部分---------------------*/
+section{
+	margin-top: 50px;
+}
+section img{
+	margin: 0 auto;
+	width: 90%;
+}
+section #z05_products{
+	display: flex;
+	padding: 0 10%;
+}
+section #z05_products a{
+	margin:40px auto 0;
+}
+section #z0501_products,#z0701_products,#z0801_products,#z0901_products,#z1101_products{
+	width: 90%;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0 5%
+}
+section #z0501_products a,#z0701_products a,#z0801_products a,#z0901_products a{
+	display: block;
+	width: 25%;
+	margin: 0;
+}
+section #z0501_products a img,#z0701_products a img,#z0801_products a img,#z0901_products a img{
+	width: 100%;
+	height: 100%;
+}
+section #z1101_products{
+	position: relative;
+}
+section #z1101_products #lijiyuyue{
+	width: 10%;
+	height: 60px;
+	background: transparent;
+	position: absolute;
+	top: 12%;
+	left:45%;
+}
+section #sousuo{
+	text-align: center;
+}
+section input{
+	border: 1px solid #9a9999;
+	padding: 0 5px;
+	outline-style: none;
+}
+section #sousuo #soutext{
+	width: 400px;
+	height: 24px;
+	border-right: none;
+}
+section #sousuo #sousubmit{
+	height: 26px;
+	background: #ab0410;
+	border: 1px solid #77031c;
+	color: white;
+}
+section #sousuo p{
+	margin:10px;
+	color: #ab0410;
+}

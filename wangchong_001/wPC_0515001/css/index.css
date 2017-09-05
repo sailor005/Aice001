@@ -1,0 +1,128 @@
+
+
+
+/*回到顶部-------------------------------------------------------*/
+#xzapp img,#zxkf img,#hddb img{
+	border-bottom: 1px solid #b81b22;
+}
+header #hui{
+	position: absolute;
+	right: 1%;
+	width:6%;
+	border:1px solid #b81b22;
+	cursor: pointer;
+}
+
+
+/*内容---------------------------------------------------------*/
+section{
+	width: 100%;
+	height: auto;
+}
+	/*充值*/
+#chongzhi img{
+	width: 90%;
+	margin: 50px 5%;
+}
+	/*每日秒杀*/
+#mrms{
+	width: 90%;
+	height: 0.15rem;
+	margin: 0 auto;
+	font-size: 0.05rem;
+	line-height: 0.15rem;
+	color: #b81b22;
+	background: url(../img/mrms.png);
+	background-size: cover;
+}
+#mrms img{
+	width: 100%;
+	height: 100%;
+	margin: 0 5%;
+}
+#mrms span:nth-of-type(1){
+	color: white;
+	margin-left: 50%;
+}
+#mrms span:nth-of-type(2), span:nth-of-type(3),span:nth-of-type(4){
+	display: inline-block;
+	width: 0.1rem;
+	height: 0.1rem;
+	text-align: center;
+	line-height: 0.1rem;
+	border: 1px solid #b81b22;
+	margin: 0 1%;
+}
+
+	/*衣服*/
+.fuzhuang{
+	display: flex;
+	padding: 0.005rem 4%;
+}
+p{
+	font-size: 0.08rem;
+	margin: 0.05rem auto;
+	text-align: center;
+}
+section .fuzhuang:nth-of-type(n+6){
+	padding: 2% 4%;
+}
+.fuzhuang div{
+	flex:1;
+	margin: 0 1% 0;
+}
+.fuzhuang img{
+	width: 100%;
+}
+
+
+
+/*响应式布局------------------------------------------------------------*/
+@media screen and (max-width:400px){
+	#chongzhi img{
+		margin: 5px 5% 0;
+	}
+	.fuzhuang{
+		display: block;
+	}
+	header #hui{
+		width:10%;
+	}
+	#btn{
+		display: none;
+	}
+	#box01 #boxbk .sg01{
+		display: block;
+	}
+	#box02 #boxelse{
+		display:block;
+	}
+	#box02 img{
+		display:block;
+		height: 0.8rem;
+		margin: 0.1rem auto;
+	}
+	p{
+		display: none;
+	}
+}
+@media screen and (min-width:401px) and (max-width:900px){
+	
+	#chongzhi img{
+		margin: 20px 5% 0;
+	}
+	.fuzhuang{
+		display: block;
+	}
+	.fuzhuang div{
+		display: block;
+		float: left;
+		width: 48%;
+	}
+	#btn{
+		display: none;
+	}
+	p{
+		display: none;
+	}
+}

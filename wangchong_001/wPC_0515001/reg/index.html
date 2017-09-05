@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>	
+		欢迎您：<span id="userName"></span>		
+	</body>
+</html>
+<script type="text/javascript" src="../js/cookieTools.js" ></script>
+<script type="text/javascript">
+
+function $(id){
+	return document.getElementById(id);
+}
+
+window.onload = function(){
+	//得到cookie
+	var userName = getCookie("userName");
+	if(userName!=""){
+		$("userName").innerHTML = userName;
+	}else{
+		$("userName").innerHTML = "请登录";
+	}
+}
+
+</script>
+
+

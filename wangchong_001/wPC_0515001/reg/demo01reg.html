@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>	
+		用户名：<input id="userId" type="text" name="userName" /><span id="userMsg"></span><br/>
+		密  码：<input id="passId" type="password" name="userPass" /><br/>
+		重复密码：<input type="password" name="userPass" /><br/>
+		<input id="btnReg" type="button" value="注册" />
+	</body>
+</html>
+<script type="text/javascript" src="../js/ajaxTools.js" ></script>
+<script type="text/javascript">
+
+function $(id){
+	return document.getElementById(id);
+}
+
+function checkUserSuccess(str){
+	if(str=="1"){
+		$("userMsg").innerHTML = "亲，用户名已经被使用！";	
+	}else{
+		$("userMsg").innerHTML = "亲，用户名没人用！";	
+	}
+}
+
+function failFunc(str){
+	alert(str);
+}
+
+function checkUser(){
+	return true;
+}
+
+function checkPass(){
+	return true;
+}
+
+function checkMail(){
+	return true;
+}
+
+window.onload = function(){
+	$("userId").onblur = function(){
+		ajax1704ByPrmoise(
+			{
+				"url":"checkUser02.php",
+				"data":"userName="+$("userId").value
+			}
+		).then(checkUserSuccess,failFunc);	
+	}
+	
+	function regSave(str){
+		if(str=="1"){
+			alert("亲，用户名已存在");
+			return;
+		}
+		ajax1704ByPrmoise({
+			"url":"regSave.php",
+			"method":"post",
+			"data":"userName="+$("userId").value+"&userPass="+$("passId").value
+		}).then(function(str){
+				if(str=="1"){
+					alert("注册成功！");
+					location.href="login.html";
+				}else{
+					alert("注册失败！");
+				}
+		},failFunc);
+	}
+	
+	//注册
+	$("btnReg").onclick = function(){
+		//if(前端验证成功){
+		if(checkUser()&&checkPass()&&checkMail()){
+			//验证用户名是否存在
+			ajax1704ByPrmoise(
+				{
+					"url":"checkUser02.php",
+					"data":"userName="+$("userId").value,
+				}
+			).then(regSave,failFunc);
+		}	
+	}
+}
+
+</script>
+
+

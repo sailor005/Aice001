@@ -1,0 +1,103 @@
+
+
+header{
+	width: 100%;
+	height: auto;
+	background: #b61b1f;
+	font-size: 16px;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header input,a{
+	margin: 0.1rem;
+}
+header input{
+	width:100%;
+	margin-right: 0;
+	border-radius: 0.04rem;
+	border-style: none;
+	border: 1px solid #f7f7f7;
+	outline-style: none;
+}
+header a .iconfont{
+	color: white;
+}
+
+
+/*菜单分类-----------------------------------*/
+#caidan{
+	
+	width: 30%;
+	background: black;
+	display: none;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.1rem;
+	z-index: 1;
+	opacity: 0.8;
+}
+
+#caidan ul a{
+	margin: 0;
+	padding: 0;
+}
+#caidan ul li{
+	color: white;
+	font-size: 0.08rem;
+	text-align: center;
+	display: block;
+	padding: 0.1rem 0;
+	border-bottom: 1px solid gray;
+}
+#kaiguan02{
+	display: none;
+}
+
+
+section{
+	flex: 1;
+	/*background: blue;*/
+	overflow-y:scroll;
+	position: relative;
+	padding: 0;
+	margin-bottom: 0.8rem;
+}
+
+section p{
+	display: block;
+	width: 95%;
+	height: 0.42rem;
+	background: #f1f1f1;
+	font-size: 0.16rem;
+	line-height: 0.42rem;
+	text-align: center;
+	letter-spacing: 0.16rem;
+	margin: 0 auto;
+}
+
+
+.shiyan{
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;/*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+}
+.shiyan a{
+	display: block;
+	width:30%;
+	font-size: 10px;
+	color: black;
+	text-align: center;
+	/*border-right: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;*/
+	box-sizing: border-box;
+	margin: 1.5%;/*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+}
+.shiyan a{
+	border: 1px solid #f7f7f7;
+}
+.shiyan a img{
+	width: 100%;
+}
