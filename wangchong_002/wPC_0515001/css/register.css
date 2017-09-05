@@ -1,0 +1,133 @@
+body{
+	
+
+}
+.headertop{
+	width: 90%;
+	padding: 5px 5%;
+	height: 50px;
+	border-bottom: 1px solid gray;
+	display: flex;
+	justify-content: space-between;
+}
+.headertop a img{
+	width: 185px;
+	height: 46px;
+}
+.headertop a:nth-of-type(2){
+	line-height: 50px;
+}
+
+
+section{
+
+}
+.sectiontop{
+	width: 1200px;
+	height: 530px;
+	background: url(../img06/bjt001.jpg) no-repeat 180px 120px;
+	margin: 0 auto;
+	position: relative;
+}
+.sectiontop .zhuceyou{
+	width: 400px;
+	height: 470px;
+	position: absolute;
+	right: 100px;
+	margin: 30px 0;
+}
+.sectiontop .zhuceyou .fkdenglu{
+	display: flex;
+	justify-content: space-between;
+}
+
+.sectiontop .zhuceyou .fkdenglu span:nth-of-type(1){
+	font-size: 22px;
+	color: gray;
+	font-weight: 600;
+	line-height: 64px;
+}
+.sectiontop .zhuceyou .fkdenglu span:nth-of-type(2){
+	font-size: 12px;
+	color: #a0a094;
+	line-height: 64px;
+}
+.sectiontop .zhuceyou .fkdenglu span:nth-of-type(2) a{
+	color: #b52026;
+}
+
+#qiehuan{
+	display: flex;
+}
+#qiehuan span{
+	flex: 1;
+	height: 35px;
+	background: #f3f3f3;
+	text-align: center;
+	line-height: 35px;
+	font-size: 14px;
+}
+#qiehuan span:nth-of-type(1){
+	background: #b82c22;
+	color: white;
+}
+
+#boxcheck02{
+	display: none;
+}
+#boxcheck02 input{
+	margin: 2px auto;
+}
+
+
+table{
+	width: 100%;
+
+}
+input{
+	display: block;
+	width: 360px;
+	height: 45px;
+	color: #a0a094;
+	margin: 10px auto;
+	outline-style: none;
+}
+.zhaohuimm{
+	float: right;
+	color: #b82c22;
+	margin-right: 20px;
+}
+input:nth-last-of-type(1){
+	margin: 25px auto;
+	font-size: 20px;
+	color: white;
+	background: #b52026;
+	border: none;
+	cursor: pointer;
+}
+input:nth-last-of-type(1):hover{
+	font-weight: 600;
+}
+.qitadl{
+	padding: 10px 0 0 20px;
+	color: #a0a094;
+	line-height: 30px;
+	border-top: 1px dashed #e4e4e4;
+}
+.qitadl a{
+	float: left;
+	margin: 0 5px;
+}
+
+
+#box2{
+
+}
+
+footer{
+
+}
+
+#boxelse{
+
+}

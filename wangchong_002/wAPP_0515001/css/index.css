@@ -1,0 +1,231 @@
+
+
+header{
+	width: 100%;
+	height: auto;
+	background: #b61b1f;
+	font-size: 16px;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header input,a{
+	margin: 0.1rem;
+}
+header input{
+	width:100%;
+	margin-right: 0;
+	border-radius: 0.04rem;
+	border-style: none;
+	border: 1px solid #f7f7f7;
+	outline-style: none;
+}
+header a .iconfont{
+	color: white;
+}
+
+/*回到顶部-------------------------------------------------------*/
+
+/*
+#hui{
+	position: absolute;
+	right: 1%;
+	width:60%;
+	height: 0.5rem;
+	background: green;
+	border:1px solid #b81b22;
+	z-index: 12;
+	opacity: 0.4;
+}
+*/
+
+
+/*轮播图开始-------------------------------------------------*/
+#box{
+	width:100%;
+	margin: 0 auto;
+	position:relative;
+	cursor: pointer;
+}
+#imgg{
+	width:100%;
+	height:100%;
+}
+#key01,#key02{
+	position: absolute;
+	top: 40%;
+	font-size: 0.16rem;
+}
+#key01 img{
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+}
+#key01{
+	left: -0.05rem;
+}
+#key02{
+	right: -0.05rem;
+}
+#btn{
+	list-style:none;
+	position:absolute;
+	width:50%;
+	left:40%;
+	bottom:5%;
+}
+#btn li{
+	float:left;
+	width:0.08rem;
+	height:0.08rem;
+	margin:0.5%;
+	border-radius: 50%;
+}
+header img{
+	width: 100%;
+}
+
+/*轮播图结束--------------------------------*/
+
+
+section{
+	flex: 1;
+	/*background: blue;*/
+	overflow-y:scroll;
+}
+#tlg{
+	width: 100%;
+	margin: 0.1rem 0;
+}
+section a:nth-of-type(1){
+	margin: 0;
+}
+section .bjth{
+	width: 100%;
+}
+section .bjth a{
+	display: block;
+	width: 100%;
+	height: 2rem;
+	margin: 0;
+	font-size: 0.24rem;
+	line-height: 0.28rem;
+	text-align: center;
+	color: black;
+	padding-top: 0.1rem;
+}
+section .bjth a p:nth-of-type(2){
+	display: block;
+	width: 20%;
+	font-size: 0.12em;
+	border: 1px solid black;
+	border-radius: 0.05rem;
+	margin: 0.1rem auto;
+}
+section #bj0001 a{
+	background: url(../img/bj_001.jpg) no-repeat;
+	background-size: cover;
+}
+section #bj0002{
+	height: 1rem;
+}
+section #bj0002 a{
+	color: white;
+	border: 1px solid white;
+	background: url(../img/bj_002.jpg) no-repeat;
+	background-size: cover;
+}
+section #bj0002 a p:nth-of-type(2){
+	border: 1px solid white;
+}
+section #bj0003 a{
+	background: url(../img/bj_003.jpg) no-repeat;
+	background-size: cover;
+	text-align: left;
+	text-indent: 10%;
+	padding-top: 10%;
+}
+section #bj0003 a p:nth-of-type(2){
+	text-indent: 0;
+	margin: 3% 0 0 10%;
+	text-align: center;
+}
+section #bj0004 a,section #bj0005 a,section #bj0006 a,section #bj0007 a{
+	height: 1rem;
+	text-align: right;
+	margin: 0.2rem 0 0 0 ;
+}
+section #bj0004 a{
+	background: url(../img/bj_004.jpg) no-repeat;
+	background-size: cover;
+}
+section #bj0005 a{
+	background: url(../img/bj_005.jpg) no-repeat;
+	background-size: cover;
+}
+section #bj0006 a{
+	background: url(../img/bj_006.jpg) no-repeat;
+	background-size: cover;
+}
+section #bj0007 a{
+	background: url(../img/bj_007.jpg) no-repeat;
+	background-size: cover;
+}
+section #bj0004 a p:nth-of-type(1),#bj0005 a p:nth-of-type(1),#bj0006 a p:nth-of-type(1),#bj0007 a p:nth-of-type(1){
+	text-indent: 0;
+	margin: 3% 10% 0 50%;
+	text-align: center;
+}
+section #bj0004 a p:nth-of-type(2),#bj0005 a p:nth-of-type(2),#bj0006 a p:nth-of-type(2),#bj0007 a p:nth-of-type(2){
+	text-indent: 0;
+	margin: 3% 20% 0 0;
+	text-align: center;
+	float: right;
+}
+#yjzqb{
+	width: 100%;
+	margin-bottom: 1rem;
+	padding-top: 0.1rem;
+	text-align: center;
+	font-size: 0.12rem;
+	color: gray;
+	line-height: 0.24rem;
+	
+}
+
+
+/*czfx*/
+.czfx{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	background: white;
+	margin-bottom: 0.2rem;
+	justify-content: center;/*dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+}
+.czfx a{
+	display: block;
+	width: 50%;
+	font-size: 10px;
+	color: black;
+	text-align: center;
+	/*border-right: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;*/
+	box-sizing: border-box;
+	margin: 0;
+}
+.czfx a{
+	border: 1px solid #f7f7f7;
+}
+.czfx img{
+	width: 80%;
+	margin: 0 10%;
+}
+/*
+.czfx a:nth-child(2n){
+	border-right: none;
+}
+*/
+
+

@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-size: 20px; }
+
+div {
+  width: 100px;
+  height: 200px;
+  font-size: 12px; }
+  div a {
+    display: block;
+    color: red;
+    font-size: 20px; }
+
+#box01 {
+  width: 200px; }
+
+#box02 {
+  width: 700px; }
+
+/*# sourceMappingURL=w090501.css.map */

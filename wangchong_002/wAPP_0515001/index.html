@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>凡客主页</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<header>
+		<input type="text" name="" id="" value="" />
+		<a href="#"><i class="iconfont icon-xinxi"></i></a>
+		<!--回到顶部部分-->
+		<!--<div id="hui" onclick="show()"></div>-->
+		
+	</header>
+	
+	
+	<section>
+		
+	<!--轮播图部分-->
+	<div id="box">
+		<img id="imgg" src="img/wztt.jpg">
+		<ul id="btn">
+			<li onclick="goImg(1)"></li>
+			<li onclick="goImg(2)"></li>
+			<li onclick="goImg(3)"></li>
+			<li onclick="goImg(4)"></li>
+			<li onclick="goImg(5)"></li>
+			<li onclick="goImg(6)"></li>
+			<li onclick="goImg(7)"></li>
+			<li onclick="goImg(8)"></li>
+		</ul>
+		
+	</div>
+	
+	
+		<!--<a href="#"><img src="img/tlg.jpg" id="tlg"/></a>-->
+		<div id="bj0001" class="bjth">
+			<a href="#"><p>帆布鞋</p><p>点击查看</p></a>
+		</div>
+		<div class="czfx">
+			<a href="#"><img src="img/products_01.jpg"/><span></span></a>
+			<a href="#"><img src="img/products_02.jpg"/><span></span></a>
+			<a href="#"><img src="img/products_03.jpg"/><span></span></a>
+			<a href="#"><img src="img/products_10.jpg"/><span></span></a>
+			<a href="#"><img src="img/products_11.jpg"/><span></span></a>
+			<a href="#"><img src="img/products_12.jpg"/><span></span></a>
+		</div>
+		<div id="bj0002" class="bjth">
+			<a href="#"><p>更多秒杀精品...</p><p>点击查看</p></a>
+		</div>
+		<div class="czfx">
+			<a href="#"><img src="img/products_01.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_02.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_03.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_04.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_05.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_06.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_07.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_08.jpg"/><span>充值返现</span></a>
+		</div>
+		<div id="bj0003" class="bjth">
+			<a href="#"><p>水柔棉</p><p>点击查看</p></a>
+		</div>
+		<div class="czfx">
+			<a href="#"><img src="img/products_01.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_02.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_03.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_04.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_05.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_06.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_07.jpg"/><span>充值返现</span></a>
+			<a href="#"><img src="img/products_08.jpg"/><span>充值返现</span></a>
+		</div>
+		<div id="bj0004" class="bjth">
+			<a href="#"><p>--开学季--</p><p>点击查看</p></a>
+		</div>
+		<div id="bj0005" class="bjth">
+			<a href="#"><p>--早秋新品--</p><p>点击查看</p></a>
+		</div>
+		<div id="bj0006" class="bjth">
+			<a href="#"><p>--定制衬衫--</p><p>点击查看</p></a>
+		</div>
+		<div id="bj0007" class="bjth">
+			<a href="#"><p>--更多频道--</p><p>点击查看</p></a>
+		</div>
+		<div id="yjzqb">
+			<p>已加载全部</p>
+		</div>
+	</section>
+	<footer>
+		<a href="#"><i class="iconfont icon-shouye"></i><span>首页</span></a>
+		<a href="classify.html"><i class="iconfont icon-fenlei"></i><span>分类</span></a>
+		<a href="#"><i class="iconfont icon-weibiaoti2"></i><span>定制</span></a>
+		<a href="#"><i class="iconfont icon-gouwuche"></i><span>购物车</span></a>
+		<a href="personal.html"><i class="iconfont icon-wode"></i><span>我的</span></a>
+	</footer>
+</body>
+</html>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+
+
+//轮播图部分开始：
+var shu=1;
+var myTime=null;
+var imgs=["wztt.jpg","ttt.jpg","mf0op9ag.jpg","0822tt.jpg","wztt01.jpg","sm01.jpg","sm02.jpg","sm03.jpg"];
+var urls=["http://www.baidu.com","http://www.taobao.com,","http://www.qq.com","http://www.ximalaya.com"];
+
+function startTime(){
+	myTime=setInterval(changeImg,1000);
+}
+function changeImg(){
+	shu++;
+	if(shu>8){
+		shu=1;
+	}
+	changeImgandBtn(shu);
+}
+function stopTime(){
+	clearInterval(myTime);
+}
+function goImg(shu01){
+	shu=shu01;
+	changeImgandBtn(shu);
+}
+function changeImgandBtn(shu){
+	$("imgg").src="img/"+imgs[shu-1];
+	var lis=$("btn").children;
+	for(var i=0;i<lis.length;i++){
+		lis[i].style.background="transparent";
+	}
+	lis[shu-1].style.background="transparent";
+}
+window.onload=function(){
+	var lis=$("btn").children;
+	lis[0].style.background="transparent";
+		startTime();
+	$("box").onmouseover=function(){
+		stopTime();
+	}
+	$("box").onmouseout=function(){
+		startTime();
+	}
+	$("imgg").onclick=function(){
+		location.href=urls[shu-1];
+	}
+	$("key01").onclick=function(){
+		shu--;
+		changeImgandBtn(shu);
+		if(shu<=1){
+			shu=9;
+		}
+	}
+	$("key02").onclick=function(){
+		shu++;
+		changeImgandBtn(shu);
+		if(shu>=8){
+			shu=0;
+		}
+	}
+}
+//轮播图部分结束。
+
+
+	
+
+/*
+//倒计时		
+var daojishi;
+function startTime(){
+	daojishi = setInterval(addSecond,1000);
+}
+var fen = 2;
+var miao = 30;
+var hmiao = 40;
+
+function addSecond(){
+	hmiao--;
+	if(hmiao<=0){
+		hmiao=59;
+		miao--;
+	}
+	if(miao<=0){
+		miao=59;
+		fen--;
+	}
+	$("spanhmiao").innerHTML = hmiao;
+	$("spanmiao").innerHTML = miao;
+	$("spanfen").innerHTML = fen;
+}
+function stopTime(){
+	if(daojishi!=null){
+		clearInterval(daojishi);
+		daojishi = null;
+	}
+}
+function resetTime(){
+	stopTime();
+	fen = 2;
+	miao = 30;
+	hmiao = 40;
+	$("spanhmiao").innerHTML = hmiao;
+	$("spanmiao").innerHTML = miao;
+	$("spanfen").innerHTML = fen;
+}
+window.onload=function(){
+	startTime();
+}
+//倒计时结束------------------------
+*/
+</script>
