@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录注册</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+<header>
+	<div class="headertop">
+		<a href="index.html"><img src="img06/logo18546.png" alt=""></a>
+		<a href="#">帮助</a>
+	</div>
+</header>
+
+
+<section>
+	<div class="sectiontop">
+		<div class="zhuceyou">
+			<div class="fkdenglu">
+				<span>凡客Vancl登录</span><span>没有账户免费<a href="">注册</a></span>
+			</div>
+			<div id="qiehuan">
+				<span id="check01">普通登录</span>
+				<span id="check02">快速登录</span>
+			</div>
+			<div id="boxcheck01">
+				<input id="userId" type="text" name="userName"  value="请输入用户名"/><span id="userMsg"></span><br/>
+				<input id="passId" type="password" name="userPass" /><br/>
+				<a class="zhaohuimm" href="">找回密码</a>
+				<input type="submit" id="btnLogin" value="登  录"/>
+			</div>
+
+			<div id="boxcheck02">
+				<input id="userId" type="text" name="userName"  value="输入用户名"/><span id="userMsg"></span><br/>
+				<input id="userId" type="text" name="userName"  value="验证码"/><span id="userMsg"></span><br/>
+				<input id="passId" type="password" name="userPass" /><br/>
+				<input type="submit" id="btnLogin" value="登  录"/>
+			</div>
+
+			<div class="qitadl">
+				<span>使用合作网站账号登录凡客</span><br/>
+				<a href=""><img src="img06/qtdl_01.jpg" alt=""></a>
+				<a href=""><img src="img06/qtdl_02.jpg" alt=""></a>
+				<a href=""><img src="img06/qtdl_03.jpg" alt=""></a>
+				<a href=""><img src="img06/qtdl_04.jpg" alt=""></a>
+				<a href=""><img src="img06/qtdl_05.jpg" alt=""></a>
+				<a href=""><img src="img06/qtdl_06.jpg" alt=""></a>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--最底部-->
+<footer>
+	
+	<div id="box02">
+		<span>Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号<br/>凡客诚品（北京）科技有限公司</span>
+		<div id="boxelse">
+			<a href=""><img src="img/99_cxwz.png" alt=""></a>
+			<a href=""><img src="img/99_zgfzxh.png" alt=""></a>
+			<a href=""><img src="img/99_wsjybzzx.png" alt=""></a>
+			<a href=""><img src="img/99_jyxwz.png" alt=""></a>
+			<a href=""><img src="img/99_bzd.png" alt=""></a>
+			<a href=""><img src="img/99_ysppztc.png" alt=""></a>
+		</div>
+	</div>
+</footer>	
+</body>
+</html>
+<!--<script type="text/javascript" src="js/common.js"></script>-->
+<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="js/cookieTools.js" ></script>
+<script type="text/javascript" src="js/ajaxTools.js" ></script>
+<script type="text/javascript">
+
+function $(id){
+	return document.getElementById(id);
+}
+
+window.onload = function(){
+	$("btnLogin").onclick = function(){
+		let postStr="userName="+$("userId").value+"&userPass="+$("passId").value;
+		
+		ajax1704ByPrmoise({
+			"url":"reg/loginCheck.php",
+			"method":"post",
+			"data":postStr
+		}).then(function(str){
+			if(str=="1"){
+				//1、保存cookie
+				addCookie("userName",$("userId").value,7);
+				//2、跳转到首页，
+				location.href = "reg/index.html";
+			}else{
+				alert("登陆失败，用户名或者密码不对！");
+			}
+		},function(str){
+			alert(str);
+		});
+	}
+}
+
+</script>
+

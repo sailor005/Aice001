@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+$baseFontSize:10px;
+
+body{
+    margin: 0;
+    padding: 10px;
+    font-size: $baseFontSize*2;
+}
+
+
+div{
+    width: 100px;
+    height: 200px;
+    
+    font-size: $baseFontSize+2;
+    a{
+        display: block;
+        color: red;
+        font-size: $baseFontSize*2;
+    }
+}
+@mixin width($width:200px){
+    width:$width;
+}
+#box01{
+    @include width;
+}
+#box02{
+    @include width(700px);
+}
