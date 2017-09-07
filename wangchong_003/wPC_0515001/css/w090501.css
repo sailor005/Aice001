@@ -38,19 +38,17 @@ header #hui p {
   width: 90%;
   display: flex;
   margin: 1% auto; }
-
-#qiehuan span {
-  flex: 1;
-  height: 50px;
-  display: block;
-  background: #f3f3f3;
-  text-align: center;
-  line-height: 50px;
-  font-size: 24px; }
-
-#qiehuan span:nth-of-type(1) {
-  background: #b82c22;
-  color: white; }
+  #qiehuan span {
+    flex: 1;
+    height: 50px;
+    display: block;
+    background: #f3f3f3;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px; }
+  #qiehuan span:nth-of-type(1) {
+    background: #b82c22;
+    color: white; }
 
 section {
   width: 90%;
@@ -73,14 +71,13 @@ section {
   width: 100%;
   margin: 0 auto;
   display: flex; }
-
-#xuanxiang01 a, #xuanxiang02 a {
-  flex: 1;
-  text-align: center;
-  display: inline-block;
-  background: #f3f3f3;
-  margin: 0 1%;
-  padding: 1% 0; }
+  #xuanxiang01 a, #xuanxiang02 a {
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    background: #f3f3f3;
+    margin: 0 1%;
+    padding: 1% 0; }
 
 #xuanxiang01 a img {
   width: 100%; }
@@ -97,15 +94,13 @@ section {
   width: 100%;
   display: flex;
   flex-wrap: wrap; }
-
-.menu_l a, .menu_r a, .menu_l01 a, .menu_r01 a, .menu_l02 a, .menu_r02 a {
-  margin: 1%;
-  border: 1px solid #f3f3f3;
-  overflow: hidden; }
-
-.menu_l a img, .menu_r a img, .menu_l01 a img, .menu_r01 a img, .menu_l02 a img, .menu_r02 a img {
-  width: 100%;
-  margin-bottom: 5px; }
+  .menu_l a, .menu_r a, .menu_l01 a, .menu_r01 a, .menu_l02 a, .menu_r02 a {
+    margin: 1%;
+    border: 1px solid #f3f3f3;
+    overflow: hidden; }
+  .menu_l img, .menu_r img, .menu_l01 img, .menu_r01 img, .menu_l02 img, .menu_r02 img {
+    width: 100%;
+    margin-bottom: 5px; }
 
 .menu_l a, .menu_r a {
   width: 22%; }
