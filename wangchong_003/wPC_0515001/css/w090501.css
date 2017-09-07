@@ -117,14 +117,10 @@ section .menu_l, .menu_r {
 section .menu_l a, .menu_r a {
   display: block;
   position: relative; }
+  section .menu_l a p, .menu_r a p {
+    color: #b81b22; }
 
-section .menu_l a p, .menu_r a p {
-  color: #b81b22; }
-
-/*
-section .menu_l a:hover{
-}
-*/
+section .menu_l a p, .menu_r a
 section .menu_l a span:nth-of-type(1), .menu_r a span:nth-of-type(1) {
   margin-right: 0.03rem; }
 

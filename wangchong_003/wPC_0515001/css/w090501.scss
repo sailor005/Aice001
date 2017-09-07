@@ -154,10 +154,11 @@ section .menu_l,.menu_r{
 section .menu_l a,.menu_r a{
     display: block;
     position: relative;
+    p{
+        color: #b81b22;
+    }
 }
-section .menu_l a p,.menu_r a p{
-    color: #b81b22;
-}
+section .menu_l a p,.menu_r a 
 /*
 section .menu_l a:hover{
 }
