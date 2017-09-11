@@ -19,35 +19,38 @@
 	<div class="sectiontop">
 		<div class="zhuceyou">
 			<div class="fkdenglu">
-				<span>凡客Vancl登录</span><span>没有账户免费<a href="">注册</a></span>
+				<span>凡客Vancl登录</span>
+				<span id="wzwz">没有账户免费</span><span id="zchdl">注册</span>
+				<span id="wzwz02">我已注册，现在就</span><span id="zchdl02">登陆</span>
 			</div>
-			<div id="qiehuan">
-				<span id="check01">普通登录</span>
-				<span id="check02">快速登录</span>
-			</div>
-			<div id="boxcheck01">
-				<input id="userId" type="text" name="userName"  value="请输入用户名"/><span id="userMsg"></span><br/>
-				<input id="passId" type="password" name="userPass" /><br/>
-				<a class="zhaohuimm" href="">找回密码</a>
-				<input type="submit" id="btnLogin" value="登  录"/>
-			</div>
-
+				<div id="boxcheck01">
+					<input id="userId" type="text" name="userName"  value="请输入邮箱或手机号"/>
+					<span id="userMsg"></span><br/>
+					<input id="passId" type="password" name="userPass" value="请输入密码"/>
+					<span id="passMsg"></span><br/>
+					<a id="zhaohuimm" href="">找回密码</a>
+					<input type="submit" id="btnLogin" value="登  录"/>
+					
+					<div class="qitadl">
+						<span>使用合作网站账号登录凡客</span><br/>
+						<a href=""><img src="img06/qtdl_01.jpg" alt=""></a>
+						<a href=""><img src="img06/qtdl_02.jpg" alt=""></a>
+						<a href=""><img src="img06/qtdl_03.jpg" alt=""></a>
+						<a href=""><img src="img06/qtdl_04.jpg" alt=""></a>
+						<a href=""><img src="img06/qtdl_05.jpg" alt=""></a>
+						<a href=""><img src="img06/qtdl_06.jpg" alt=""></a>
+						
+					</div>
+				</div>
 			<div id="boxcheck02">
-				<input id="userId" type="text" name="userName"  value="输入用户名"/><span id="userMsg"></span><br/>
-				<input id="userId" type="text" name="userName"  value="验证码"/><span id="userMsg"></span><br/>
-				<input id="passId" type="password" name="userPass" /><br/>
-				<input type="submit" id="btnLogin" value="登  录"/>
-			</div>
-
-			<div class="qitadl">
-				<span>使用合作网站账号登录凡客</span><br/>
-				<a href=""><img src="img06/qtdl_01.jpg" alt=""></a>
-				<a href=""><img src="img06/qtdl_02.jpg" alt=""></a>
-				<a href=""><img src="img06/qtdl_03.jpg" alt=""></a>
-				<a href=""><img src="img06/qtdl_04.jpg" alt=""></a>
-				<a href=""><img src="img06/qtdl_05.jpg" alt=""></a>
-				<a href=""><img src="img06/qtdl_06.jpg" alt=""></a>
-				
+				<input id="userId01" type="text" name="userName"  value="请输入手机号"/>
+				<input type="button" name="hqyzm" id="hqyzm" value="获取验证码" /><br/>
+				<input type="text" name="" id="txyzm" value="填写手机验证码" /><br/>
+				<input id="passId01" type="password" name="userPass" value="设定登录密码"/><br/>
+				<input id="passId02" type="password" name="userPass" value="确认密码"/><br/>
+				<input type="checkbox"  id="qyd" /><sapn>请阅读</sapn><a href="">《VANCL凡客诚品服务条款》</a>
+				<br />
+				<input type="submit" id="btnLogin01" value="立即注册"/>
 			</div>
 		</div>
 	</div>
@@ -74,12 +77,11 @@
 <script type="text/javascript" src="js/register.js"></script>
 <script type="text/javascript" src="js/cookieTools.js" ></script>
 <script type="text/javascript" src="js/ajaxTools.js" ></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript">
 
-function $(id){
-	return document.getElementById(id);
-}
 
+/*
 window.onload = function(){
 	$("btnLogin").onclick = function(){
 		let postStr="userName="+$("userId").value+"&userPass="+$("passId").value;
@@ -102,6 +104,107 @@ window.onload = function(){
 		});
 	}
 }
+*/
+
+
+/*账户验证*/
+var num=1,num1=0,num2=0,num3=0,num4=0,num5=0;
+$(function(){
+    $("#userId").focus(function(){ 
+	    var str0=$("#userId").val();
+	    if(str0=="请输入邮箱或手机号"){
+		    $("#userId").val("");
+	 	}
+ 	});
+    $("#userId").blur(function(){ 
+	  var reg=/^\w{3,}@\w+\.(com|net|cn)$/;
+	  var str1=$("#userId").val();
+	  	if(str1==""){
+		    $("#userId").val("请输入邮箱或手机号");
+		    $("#userMsg").html("邮箱或手机号不能为空");
+		   	$("#userMsg").css("color","red");
+	 	}else if(reg.test(str1)==false){
+		    $("#userMsg").html("邮箱或手机号格式不正确");
+		    $("#userMsg").css("color","red");
+	 	}else{
+		    $.get("index.php",{"userMail":this.value},function(str){
+	        	num=str;
+	        	if(str=="1"){
+	            	$("#userMsg").css("color","red");
+	          		$("#userMsg").html("该邮箱或手机号已被注册，请重新选择");
+	        	}else{
+	            	$("#userMsg").css("color","green");
+	           		$("#userMsg").html("√");
+	        	}
+	    	});
+       	}
+ 	});
+});
+
+
+
+$(function(){
+    $("#passId").focus(function(){ 
+	    var str02=$("#passId").val();
+	    if(str02=="请输入密码"){
+		    $("#passId").val("");
+	 	}
+ 	});
+    $("#passId").blur(function(){
+        var reg=/^\w{6,18}$/;
+        var str2=$("#passId").val();
+        if(str2==""){
+		    $("#passId").val("请输入密码");
+	        $("#passMsg").html("密码不能为空");
+	        $("#passMsg").css("color","red");
+	        num1=0;
+	    }else if(reg.test(str2)==false){
+	        $("#passMsg").html("密码格式不正确");
+	        $("#passMsg").css("color","red");
+	        num1=0;
+	    }else{
+	        $("#passMsg").css("color","green");
+	        $("#passMsg").html("√");
+	        num1=1;
+	    }
+    });
+});
+
+//验证密码 
+/*function check_pwd(obj2){ 
+	var sp4=$('sp4'); 
+	if(obj2.value==''){ 
+		sp4.innerHTML='密码不能为空'; 
+		sp4.style.color='red'; 
+		return false; 
+	}else{ 
+		var reg=/^\w{6,}$/; 
+		if(reg.test(obj2.value)){ 
+			sp4.innerHTML='正确'; 
+			sp4.style.color='green'; 
+		return true; 
+		}else{ 
+			sp4.innerHTML='格式不正确'; 
+			sp4.style.color='red'; 
+			return false; 
+		} 
+	}return true; 
+} 
+*/
+$(function(){
+  $("#btnLogin").click(function(){
+        $.post("checked.php",
+                {
+                  "userName":$("#userId").val(),
+                  "userPass":$("#passId").val()
+                },function(str){
+                   // console.log(str);
+                   location.href="blouse.html"
+        })
+   
+  });
+});
+
 
 </script>
 

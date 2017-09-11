@@ -3,23 +3,49 @@ function $(id){
 	return document.getElementById(id);
 }
 
+//zchdl
+/*
+$("zchdl").onclick=function(){
+	if(document.getElementById("boxcheck01").style.display="block"){
+		document.getElementById("boxcheck01").style.display="none";
+		document.getElementById("boxcheck02").style.display="block";
+	}else{
+		document.getElementById("boxcheck01").style.display="block";
+		document.getElementById("boxcheck02").style.display="none";
+	}
+}
+*/
 
-$("check01").onmousedown=function(){
-	$("boxcheck01").style.display="block";
-	$("boxcheck02").style.display="none";
-	$("check01").style.background="#b82c22";
-	$("check01").style.color="white";
-	$("check02").style.background="#f3f3f3";
-	$("check02").style.color="black";
+$("zchdl").onclick=function(){
+	document.getElementById("boxcheck01").style.display="none";
+	document.getElementById("zchdl").style.display="none";
+	document.getElementById("wzwz").style.display="none";
+	document.getElementById("boxcheck02").style.display="block";
+	document.getElementById("zchdl02").style.display="block";
+	document.getElementById("wzwz02").style.display="block";
+	
+
+	
 }
-$("check02").onmousedown=function(){
-	$("boxcheck01").style.display="none";
-	$("boxcheck02").style.display="block";
-	$("check02").style.background="#b82c22";
-	$("check02").style.color="white";
-	$("check01").style.background="#f3f3f3";
-	$("check01").style.color="black";
+$("zchdl02").onclick=function(){
+	document.getElementById("boxcheck01").style.display="block";
+	document.getElementById("zchdl").style.display="block";
+	document.getElementById("wzwz").style.display="block";
+	document.getElementById("boxcheck02").style.display="none";
+	document.getElementById("zchdl02").style.display="none";
+	document.getElementById("wzwz02").style.display="none";
+	
 }
+
+$("qyd").onfocus=function(){
+		document.getElementById("btnLogin01").style.background="#b52026";
+}
+
+
+
+
+
+/*
 $("userId").onfocus=function(){
 	var neirong=$("userId").value;
 	if(neirong=="请输入用户名"){
@@ -37,3 +63,4 @@ $("userId").onblur=function(){
 	}
 
 }
+*/

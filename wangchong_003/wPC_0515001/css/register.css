@@ -3,9 +3,10 @@ body{
 
 }
 .headertop{
-	width: 90%;
-	padding: 5px 5%;
+	width: 1100px;
 	height: 50px;
+	padding: 5px 0;
+	margin: 0 auto;
 	border-bottom: 1px solid gray;
 	display: flex;
 	justify-content: space-between;
@@ -38,7 +39,7 @@ section{
 }
 .sectiontop .zhuceyou .fkdenglu{
 	display: flex;
-	justify-content: space-between;
+	border-bottom: 2px dashed #e4e4e4;
 }
 
 .sectiontop .zhuceyou .fkdenglu span:nth-of-type(1){
@@ -51,9 +52,27 @@ section{
 	font-size: 12px;
 	color: #a0a094;
 	line-height: 64px;
+	margin-left: 140px;
 }
-.sectiontop .zhuceyou .fkdenglu span:nth-of-type(2) a{
+.sectiontop .zhuceyou .fkdenglu span:nth-of-type(4){
+	font-size: 12px;
+	color: #a0a094;
+	line-height: 64px;
+	margin-left: 120px;
+	display: none;
+}
+#zchdl{
+	font-size: 12px;
 	color: #b52026;
+	line-height: 64px;
+	cursor: pointer;
+}
+#zchdl02{
+	font-size: 12px;
+	color: #b52026;
+	line-height: 64px;
+	cursor: pointer;
+	display: none;
 }
 
 #qiehuan{
@@ -71,12 +90,43 @@ section{
 	background: #b82c22;
 	color: white;
 }
-
+.dwhz{
+	position: relative;
+}
+#boxcheck01{
+	display: block;
+}
 #boxcheck02{
 	display: none;
 }
 #boxcheck02 input{
-	margin: 2px auto;
+	margin: 5px auto;
+	width: 386px;
+	height: 45px;
+	color: #a0a094;
+	outline-style: none;
+	padding-left: 5px;
+}
+#boxcheck02 input:nth-of-type(1){
+	width: 60%;
+}
+#boxcheck02 input:nth-of-type(2){
+	width: 35%;
+	cursor: pointer;
+}
+#boxcheck02 input:nth-last-of-type(2){
+	width: 20px;
+	vertical-align: middle;
+}
+#boxcheck02 a{
+	color: #b52026;
+	font-weight: 600;
+}
+#boxcheck02 input:nth-last-of-type(1){
+	width: 395px;
+	color: #ffffff;
+	background: #a0a094;
+	border: none;
 }
 
 
@@ -84,20 +134,21 @@ table{
 	width: 100%;
 
 }
-input{
+#boxcheck01 input{
 	display: block;
 	width: 360px;
 	height: 45px;
 	color: #a0a094;
 	margin: 10px auto;
 	outline-style: none;
+	padding-left: 5px;
 }
-.zhaohuimm{
+#boxcheck01 #zhaohuimm{
 	float: right;
 	color: #b82c22;
 	margin-right: 20px;
 }
-input:nth-last-of-type(1){
+#boxcheck01 input:nth-last-of-type(1){
 	margin: 25px auto;
 	font-size: 20px;
 	color: white;
@@ -105,16 +156,16 @@ input:nth-last-of-type(1){
 	border: none;
 	cursor: pointer;
 }
-input:nth-last-of-type(1):hover{
+#boxcheck01 input:nth-last-of-type(1):hover{
 	font-weight: 600;
 }
-.qitadl{
+#boxcheck01 .qitadl{
 	padding: 10px 0 0 20px;
 	color: #a0a094;
 	line-height: 30px;
-	border-top: 1px dashed #e4e4e4;
+	border-top: 2px dashed #e4e4e4;
 }
-.qitadl a{
+#boxcheck01 .qitadl a{
 	float: left;
 	margin: 0 5px;
 }
@@ -125,6 +176,9 @@ input:nth-last-of-type(1):hover{
 }
 
 footer{
+	width: 1100px;
+	padding: 5px 0;
+	margin: 0 auto;
 
 }
 
